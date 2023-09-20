@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mise en page 01</title>
+    <style>
+        body{
+            /* On commence par annuler la marge pas défaut pour profiter de tout l'espace de la page */
+            margin: 0;
+        }
+       body * {
+        /* L'asterisque sert à TOUT sélectionner , 
+        la faire précéder de "body" permet de dire que l'on veut tout sélectionner à l'intérieur de la balise body.
+        img, p fonctionnerait aussi dans notre cas
+        */
+        width: 50%;
+        }
+
+        p{
+            border: 1px solid black;
+            display: inline-block; /* Le compromis entre inline et block permet de dimensionner (block) Et de cohabiter dans la largeur (inlinae)*/
+            box-sizing: border-box; /* Permet à la bordure de ne pas occuper d'espace supplémentaire -voir : bordure-et-padding.html*/
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <!-- Il a fallu coller toutes les images encemble en relation en raison  d'un comportement spécifique du HTML vis-à-vis des retours à la ligne : ils sont convertis en espaces, qui prennent un peu de largeur et empêchent les images d'utiliser la totalité de l'espace -->
+    <img src="https://picsum.photos/200/300" alt=""><img src="https://picsum.photos/400/500" alt=""><img src="https://picsum.photos/250/400" alt=""><img src="https://picsum.photos/200/200" alt="">
+
+    <p>un paragraphe</p><p>un paragraphe</p><p>un paragraphe</p><p>un paragraphe</p>
+    
+    <!-- Par défaut on ne pourra pas obtenir des paragraphes côte-à-côte : les éléments block auront toujours une marge à adroite qui complétera leur largeur -->
+
+    
+
+</body>
+</html>
